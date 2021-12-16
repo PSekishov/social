@@ -1,9 +1,21 @@
 import './App.css';
+import {Routes, Route} from 'react-router-dom';
 
-function App() {
+// =========== Components ============== //
+import Layout from './components/Layout';
+import NotFound from './components/NotFound';
+
+const App = () => {
+
   return (
     <>
-      <h3>App</h3>
+      <Routes >
+        <Route path="/" element={<Layout />}> 
+          {/* <Route path=""  element={< />}/> */}
+          {/* <Route path=""  element={< />}/> */}
+        </Route>
+        <Route path="*" element={<NotFound />}/>
+      </Routes>
     </>
   );
 }
