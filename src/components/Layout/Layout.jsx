@@ -1,11 +1,14 @@
 import React from 'react';
 import './layout.css';
 
-// import {Link} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+
 
 // =========== Components ============== //
 import Header from '../Header';
 import Footer from '../Footer';
+import MapSite from '../MapSite';
+import Profile from '../Profile';
 
 
 const Layout = () => {
@@ -23,32 +26,37 @@ const Layout = () => {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-md-2">
+                        <div className="col-md-3">
+   
+                            <Profile />
+                            <MapSite />
 
-                            <div className="list-group">
-                                <a href="#" className="list-group-item list-group-item-action active" aria-current="true">Groops</a>
-                                <a href="#" className="list-group-item list-group-item-action">Frends</a>
-                                <a href="#" className="list-group-item list-group-item-action">Messages</a>
-                                <a href="#" className="list-group-item list-group-item-action">Music</a>
-                                <a href="#" className="list-group-item list-group-item-action">Weather</a>
-                                <a href="#" className="list-group-item list-group-item-action">Sport</a>
-                                <a href="#" className="list-group-item list-group-item-action">Live Ethers</a>
-                                <a href="#" className="list-group-item list-group-item-action">Games</a>
-                            </div>
                         </div>
 
-                        <div className="col-md-8">
-                        <div className="card text-dark bg-light mb-3 w-100" >
-                            <div className="card-header">Header</div>
-                            <div className="card-body">
-                                <h5 className="card-title">Light card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            </div> 
+                        <div className="col-md-6">
+                        <Outlet />
                         </div>
 
-                        <div className="col-md-2">
-                            Contacts
+                        <div className="col-md-3">
+                            <h5 className="text-muted">Contacts</h5>
+                            <div className="card mb-3">
+                                <div className="card-body">
+                                    IMG+IND Daniel Ricciardo
+                                </div>
+                            </div>
+
+                            <div className="card mb-3">
+                                <div className="card-body">
+                                IMG+IND Max Sekishov
+                                </div>
+                            </div>
+
+                            <div className="card mb-3">
+                                <div className="card-body">
+                                IMG+IND Margarita Sekishova
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>

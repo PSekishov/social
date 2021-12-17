@@ -5,7 +5,7 @@ const Footer = () => {
     
     return (
         <>
-            <h3>FOOTER</h3>
+            <h3>Development &reg; Pavel Sekishov | React Version 17.0.2</h3>
         </>
     );
 };
